@@ -26,6 +26,51 @@
         @enderror
     </div><br>
 
+    <div class="form-group">
+        <label for="alias">Alias</label>
+        <input type="text" name="alias" class="form-control" value="{{$user->alias}}">
+        @error('alias')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="account_no">Account No</label>
+        <input type="text" name="account_no" class="form-control" value="{{$user->account_no}}">
+        @error('account_no')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="company_name">Company Name</label>
+        <input type="text" name="company_name" class="form-control" value="{{$user->company_name}}">
+        @error('company_name')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="manager">Manager</label>
+        <input type="text" name="manager" class="form-control" value="{{$user->manager}}">
+        @error('manager')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="api">Api</label>
+        <input type="text" name="api" class="form-control" value="{{$user->api}}">
+        @error('api')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
     {{-- <div class="form-group">
         <label for="password">password</label>
         <input type="password" name="password" class="form-control">

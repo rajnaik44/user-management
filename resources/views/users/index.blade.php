@@ -15,7 +15,12 @@
       <th scope="col">Sno.</th>
       <th scope="col">Names</th>
       <th scope="col">Email</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Account No</th>
       <th scope="col">User Roles</th>
+      <th scope="col">Manager</th>
+      <th scope="col">Company Name</th>
+      <th scope="col">Api</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -25,16 +30,22 @@
       <td>{{$loop->index + 1}}</td>
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
+      <td>{{$user->alias}}</td>
+      <td>{{$user->account_no}}</td>
       <td>
         @foreach($user->roles as $role)
         {{$role->name}}
 
         @endforeach
       </td>
-      <td>
+      <td>{{$user->Manager}}</td>
+      <td>{{$user->company_name}}</td>
+      <td>{{$user->api}}</td>
+      <td >
         <a href="{{route('users.show',$user->id)}}" class="btn btn-sm btn-dark">View</a>
-        <a href="{{route('users.edit',$user->id)}}" class="btn btn-sm btn-dark">Edit</a>
-
+        <a href="{{route('users.edit',$user->id)}}" class="btn btn-sm btn-primary">Edit</a>
+        <br>
+   
         <form action="{{route('users.destroy', $user->id)}}" method="POST" class="d-inline">
             @csrf
             @method('DELETE')

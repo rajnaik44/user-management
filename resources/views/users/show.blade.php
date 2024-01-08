@@ -9,8 +9,13 @@
      
    
           <div class="card-body">
-          <h5 class="card-title"> Name : {{ $user->name }}</h5>
+          <h5 class="card-title"> Name : {{ $user->name }}</h5><br>
           <p class="card-text"> Email : {{ $user->email }}</p>
+          <p class="card-text"> Alias : {{ $user->alias }}</p>
+          <p class="card-text"> Account No : {{ $user->account_no }}</p>
+          <p class="card-text"> Company Name : {{ $user->company_name }}</p>
+          <p class="card-text"> Manager : {{ $user->manager }}</p>
+          <p class="card-text"> Api : {{ $user->api }}</p>
           <p class="card-text"> User Roles:
             @foreach($user->roles as $role)
                 {{ $role->name }}

@@ -33,6 +33,55 @@
             
         @enderror
     </div><br>
+    
+    
+    <!-------->
+    <div class="form-group">
+        <label for="alias">Alias</label>
+        <input type="text" name="alias" class="form-control">
+        @error('alias')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="account_no">Account No</label>
+        <input type="text" name="account_no" class="form-control">
+        @error('account_no')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="company_name">Company Name</label>
+        <input type="text" name="company_name" class="form-control">
+        @error('company_name')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+
+    <div class="form-group">
+        <label for="company_name">Manager</label>
+        <input type="text" name="manager" class="form-control">
+        @error('manager')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+    
+    <div class="form-group">
+        <label for="api">Api</label>
+        <input type="text" name="api" class="form-control">
+        @error('api')
+        <span class="text-danger">{{$message}}</span>
+            
+        @enderror
+    </div><br>
+    
+    <!-------->
 
     <div class="form-group">
         <label for="roles"> User Roles</label>

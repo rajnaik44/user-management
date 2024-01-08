@@ -35,7 +35,12 @@ class UserController extends Controller
             'name'=> 'required|string|max:255',
             'email'=> 'required|email|unique:users,email',
             'password' => 'required|string|min:5',
-            'roles' => 'required|array'
+            'roles' => 'required|array',
+            'alias' => 'required|string',
+            'account_no' => 'required|string',
+            'company_name' => 'required|string',
+            'manager' => 'required|string',
+            'api' => 'required|string',
 
         ]) ;
 
@@ -72,12 +77,18 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email,' . $user->id,
             // 'password' => 'required|string|min:5',
             'roles' => 'required|array',
+            'alias' => 'required|string',
+            'account_no' => 'required|string',
+            'company_name' => 'required|string',
+            'manager' => 'required|string',
+            'api' => 'required|string',
         ]);
     
         $user->update($request->all());
         $user->roles()->sync($request->input('roles'));
     
         return redirect()->route('users.index')->with('success', 'User updated successfully');
+        
     }
     // public function update(Request $request, $id){
     //     $user = User::find($id);
@@ -97,8 +108,12 @@ class UserController extends Controller
      */
     public function destroy(user $user)
     {
+    $user->delete();
       $user->roles()->detach();
       $user->delete();
         return redirect()->route('users.index')->with('success','deleted successfully');
     }
+
+    
+   
 }
