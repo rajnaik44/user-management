@@ -59,7 +59,7 @@ class UserController extends Controller
     public function edit(user $user)
     {
         $roles = Role::all();
-        return view('users.show',['user'=>$user, 'roles' =>$roles]);
+        return view('users.edit',['user'=>$user, 'roles' =>$roles]);
     }
 
     /**
@@ -70,7 +70,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,' . $user->id,
-            'password' => 'required|string|min:5',
+            // 'password' => 'required|string|min:5',
             'roles' => 'required|array',
         ]);
     

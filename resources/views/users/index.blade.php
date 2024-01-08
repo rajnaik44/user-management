@@ -15,7 +15,7 @@
       <th scope="col">Sno.</th>
       <th scope="col">Names</th>
       <th scope="col">Email</th>
-      <th scope="col">Roles</th>
+      <th scope="col">User Roles</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>

@@ -14,11 +14,7 @@ return new class extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            // $table->string('alias')->nullable();
-            // $table->string('account_no');
-            // $table->enum('user_role', ['staff', 'superadmin', 'dealer', 'manager']);
-            // $table->string('company_name')->nullable();
-            // $table->enum('status', ['active', 'inactive']);
+            
             $table->timestamps();
         });
     }
